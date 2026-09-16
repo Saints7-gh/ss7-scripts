@@ -495,6 +495,7 @@ do
       for sk, bv in pairs(_o7open) do
         if sk >= A + 1 then
           bv[1] = R[sk - 1]
+          bv[2] = false
           _o7open[sk] = nil
         end
       end
@@ -669,7 +670,8 @@ do
       local A = u36z9k5h
       local R, K, pc, Rtop = S7ST[1], S7ST[2], S7ST[3], S7ST[4]
       local AB, P, upvals, _o7va, _o7open = S7ST[5], S7ST[6], S7ST[7], S7ST[8], S7ST[9]
-      R[A] = upvals[s7bs[pc] + 1][1]
+      local box = upvals[s7bs[pc] + 1]
+      R[A] = (box[2] and box[2][box[3]] or box[1])
     end
     H0[OPTAILCALL] = function(u36z9k5h, S7ST)
       local A = u36z9k5h
@@ -758,7 +760,8 @@ end
     elseif inxeyl4vfi5v == OPGETGLOBAL then
       R[A] = xb4f9saox84i[K[s7bxs[pc] + 1]]
     elseif inxeyl4vfi5v == OPGETUPVAL then
-      R[A] = upvals[s7bs[pc] + 1][1]
+      local box = upvals[s7bs[pc] + 1]
+      R[A] = (box[2] and box[2][box[3]] or box[1])
     elseif inxeyl4vfi5v == OPTEST then
       if (s7cs[pc] ~= 0) ~= (not not R[A]) then pc = pc + 1 end
     elseif inxeyl4vfi5v == OPMOVE then
@@ -905,7 +908,8 @@ end
       R[s7as[pc+1]] = ( (s7bs[pc+1] < 256) and R[s7bs[pc+1]] or K[s7bs[pc+1] - 255] )[ (s7cs[pc+1] < 256) and R[s7cs[pc+1]] or K[s7cs[pc+1] - 255] ]
       nextra = 1
     elseif inxeyl4vfi5v == OPF_GU_T then
-      local v = upvals[s7bs[pc] + 1][1]
+      local gbox = upvals[s7bs[pc] + 1]
+      local v = (gbox[2] and gbox[2][gbox[3]] or gbox[1])
       R[A] = v
       if (s7cs[pc+1] ~= 0) ~= (not not v) then nextra = 2 else nextra = 1 end
     elseif inxeyl4vfi5v == OPF_GT_LK then
