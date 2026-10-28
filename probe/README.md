@@ -8,7 +8,9 @@ Folder ini hanya berisi **hasil encode** (tidak ada source code).
 | `ss7probe_base_v37.luau` | probe saja, encoder v3.7 (baseline server+probe) |
 | `ss7probe_base_v4.luau` | probe saja, encoder v4 (overhead encoder) |
 | `ss7magicspear_v37_probe.luau` | probe + magicfix, encoder v3.7 (kontrol) |
-| `ss7magicspear_v4_probe.luau` | probe + magicfix, encoder v4 |
+| `ss7magicspear_v4_probe.luau` | probe + magicfix, encoder v4 (fitur penuh) |
+| `ss7magicspear_v4min_probe.luau` | probe + magicfix, encoder **v4-minimal** (tanpa decoy/opshift/padding) |
+| `ss7magicspear_v37c_probe.luau` | probe + magicfix sumber sama, encoder v3.7 (kontrol baru) |
 
 Encoder: `ss7vm` seed `424242`. Sumber magicfix: `ss7v3_magicfix_test.txt` md5 `8029db73`.
 
@@ -28,4 +30,7 @@ SPEAR: hook=.. hits=.. acc=.. spears=..
 ```
 
 ## Urutan uji (12 menit, satu sesi server)
-`base_v37` -> `base_v4` -> `magicspear_v37` (tembak 5x) -> `magicspear_v4` (tembak 5x)
+`base_v37` -> `base_v4` -> `magicspear_v37c` -> `magicspear_v4min` -> (opsional) `magicspear_v4`
+
+Catatan: build `_v37c_` dan `_v4min_` memakai sumber magicfix yang SAMA (dengan optimasi idle:
+sampler dilewati saat solo, CamLock hanya ter-bind saat aktif), jadi keduanya bisa dibandingkan langsung.
