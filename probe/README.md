@@ -5,7 +5,10 @@ Folder ini hanya berisi **hasil encode** (tidak ada source code).
 
 | File | Isi |
 |---|---|
-| `ss7magicspear_v4min49_probe.luau` | **build uji terbaru** — magic spear + panel probe, encoder v4-minimal |
+| `ss7magicspear_v4min72_echo_probe.luau` | **build uji terbaru** — v4min71 + penghitung `fs/orig/close` (deteksi dua tembakan per klik); instrumentasi saja |
+| `ss7magicspear_v4min71_probe.luau` | kandidat performa — cache proyeksi 2 frame (satu perubahan vs 69) |
+| `ss7magicspear_v4min69_probe.luau` | pembanding untuk 71 (sebelum cache proyeksi) |
+| `ss7magicspear_v4min49_probe.luau` | lama (arsip) — magic spear + panel probe, encoder v4-minimal |
 | `ss7magicspear_v4min41_probe.luau` | **build cadangan** — versi yang terbukti berfungsi (fungsi + visual + hook hidup) |
 | `ss7probe_base_v4.luau` | probe saja tanpa script (kontrol: mengukur game/perangkat) |
 
@@ -31,7 +34,11 @@ PATCH patched errs=..
 T30..T180: aim/mb/smp/col/cand/selp/vel/vis/rest/nc/smpT/hc
 SMP started=.. enter=.. done=.. selfHist=..
 SPEAR: hook=.. hits=.. acc=.. spears=..
+ECHO fs=.. orig=.. close=.. gapmin=..ms   (hanya v4min72+)
 ```
+
+`ECHO`: `fs` = FireServer yang dilihat hook, `orig` = yang kita teruskan ke remote asli,
+`close` = dua FireServer berjarak <5 ms (tanda 1 klik -> 2 tembakan).
 
 ## Arti angka penting
 | Field | Arti |
