@@ -5,6 +5,8 @@ Folder ini hanya berisi **hasil encode** (tidak ada source code).
 
 | File | Isi |
 |---|---|
+| `ss7magicspear_v4min80_noprobe_probe.luau` | **UJI**: watchdog 30 s (termasuk burst `ncallCost` 300× GetChildren) **dimatikan** |
+| `ss7magicspear_v4min81_nogui_probe.luau` | **UJI**: panel `ScreenGui` disembunyikan (`Enabled=false`) — ukur biaya render 121 instance GUI |
 | `ss7magicspear_v4min79_audit_probe.luau` | **AUDIT**: baris `AUD E=… dE=… Wd=… vh/vb/ts/pc/pr/reg` tiap 30 s + saklar `noprobe` |
 | `ss7magicspear_v4min78_wcache_probe.luau` | **FIX LEAK**: `State.projCache` weak-key (`__mode="k"`) — satu perubahan vs 77 |
 | `ss7magicspear_v4min77_fixvar_probe.luau` | **FIX ENCODER**: vararg dengan `nil` tidak lagi terpotong (VM VARARG pakai jumlah eksak, bukan `#`) |
