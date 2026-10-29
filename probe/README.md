@@ -5,6 +5,7 @@ Folder ini hanya berisi **hasil encode** (tidak ada source code).
 
 | File | Isi |
 |---|---|
+| `ss7magicspear_v4min84_shell_probe.luau` | **UJI PENENTU**: hook+sampler+timer+watchdog mati sekaligus (panel tetap tampil) |
 | `ss7magicspear_v4min82_nosmp_probe.luau` | **UJI**: sampler Heartbeat 20 Hz dimatikan |
 | `ss7magicspear_v4min83_notimer_probe.luau` | **UJI**: tiga loop `task.wait(2)` (remote/status/pembersih modal) dimatikan |
 | `ss7probe_base_audit.luau` | **KONTROL**: probe saja (tanpa script) + baris `AUD t=.. E=.. dE=.. Wd=..` tiap 30 s |
