@@ -5,6 +5,7 @@ Folder ini hanya berisi **hasil encode** (tidak ada source code).
 
 | File | Isi |
 |---|---|
+| `ss7magicspear_v4min78_wcache_probe.luau` | **FIX LEAK**: `State.projCache` weak-key (`__mode="k"`) — satu perubahan vs 77 |
 | `ss7magicspear_v4min77_fixvar_probe.luau` | **FIX ENCODER**: vararg dengan `nil` tidak lagi terpotong (VM VARARG pakai jumlah eksak, bukan `#`) |
 | `ss7magicspear_v4min76_gema_probe.luau` | **UJI gema (lengkap)**: klik vs `FireServer`, dipisah **Veil (tombak)** vs **Twist (mode)**, plus `patched/argc/types` |
 | `ss7magicspear_v4min75_click_probe.luau` | **UJI gema**: bandingkan jumlah **klik/tap** dengan jumlah `FireServer` (`ECHO … click=`) |
