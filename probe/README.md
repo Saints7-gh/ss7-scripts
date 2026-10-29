@@ -5,7 +5,9 @@ Folder ini hanya berisi **hasil encode** (tidak ada source code).
 
 | File | Isi |
 |---|---|
-| `ss7magicspear_v4min72_echo_probe.luau` | **build uji terbaru** — v4min71 + penghitung `fs/orig/close` (deteksi dua tembakan per klik); instrumentasi saja |
+| `ss7magicspear_v4min73_nohook_probe.luau` | **UJI hook**: hook `__namecall` **tidak dipasang** (flag dibakar, tanpa file) |
+| `ss7magicspear_v4min74_nonewc_probe.luau` | **UJI hook**: hook dipasang **tanpa** `newcclosure` |
+| `ss7magicspear_v4min72_echo_probe.luau` | build uji terbaru — v4min71 + penghitung `fs/orig/close` (deteksi dua tembakan per klik); instrumentasi saja |
 | `ss7magicspear_v4min71_probe.luau` | kandidat performa — cache proyeksi 2 frame (satu perubahan vs 69) |
 | `ss7magicspear_v4min69_probe.luau` | pembanding untuk 71 (sebelum cache proyeksi) |
 | `ss7magicspear_v4min49_probe.luau` | lama (arsip) — magic spear + panel probe, encoder v4-minimal |
