@@ -5,6 +5,7 @@ Folder ini hanya berisi **hasil encode** (tidak ada source code).
 
 | File | Isi |
 |---|---|
+| `ss7magicspear_v4min75_click_probe.luau` | **UJI gema**: bandingkan jumlah **klik/tap** dengan jumlah `FireServer` (`ECHO … click=`) |
 | `ss7magicspear_v4min73_nohook_probe.luau` | **UJI hook**: hook `__namecall` **tidak dipasang** (flag dibakar, tanpa file) |
 | `ss7magicspear_v4min74_nonewc_probe.luau` | **UJI hook**: hook dipasang **tanpa** `newcclosure` |
 | `ss7magicspear_v4min72_echo_probe.luau` | build uji terbaru — v4min71 + penghitung `fs/orig/close` (deteksi dua tembakan per klik); instrumentasi saja |
